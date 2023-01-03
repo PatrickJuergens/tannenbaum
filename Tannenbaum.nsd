@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.32-05" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="patrick" created="2022-12-11" changedby="patrick" changed="2022-12-11" origin="Structorizer 3.32-05" text="&#34;Tannenbaum&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;höheKrone einlesen&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;höheStamm einlese&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;breite = höheKrone * 2 -1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;fortschritt = 0&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<for text="&#34;for i &#60;- 0 to i &#60; höheKrone&#34;" comment="&#34;&#34;" counterVar="i" startValue="0" endValue="i &#60; höheKrone" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+			<qFor>
+				<for text="&#34;for i1 &#60;- 0 to i1 &#60; breite&#34;" comment="&#34;&#34;" counterVar="i1" startValue="0" endValue="i1 &#60; breite" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+					<qFor>
+						<alternative text="&#34;breite / 2 - fortschritt &#60;= i1 &amp;&amp;  breite  / 2 + fortschritt &#62;= i1&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+							<qTrue>
+								<instruction text="&#34;ausgabe +&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;ausgabe .&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qFor>
+				</for>
+				<instruction text="&#34;fortschritt++&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;ausgabe \n&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qFor>
+		</for>
+		<alternative text="&#34;breite / 10 &#62;= 1&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;stammBreite = breite / 10&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse>
+				<instruction text="&#34;stammBreite = 1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qFalse>
+		</alternative>
+		<for text="&#34;for j &#60;- 0 to j &#60; höheStamm&#34;" comment="&#34;&#34;" counterVar="j" startValue="0" endValue="j &#60; höheStamm" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+			<qFor>
+				<for text="&#34;for j1 &#60;- o to j1 &#60; breite&#34;" comment="&#34;&#34;" counterVar="j1" startValue="o" endValue="j1 &#60; breite" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+					<qFor>
+						<alternative text="&#34;breite / 2 - stammBreite &#60;  j1 &amp;&amp;  breite/ 2 + stammBreite &#62; j1&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+							<qTrue>
+								<instruction text="&#34;ausgabe +&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;ausgabe .&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qFor>
+				</for>
+				<instruction text="&#34;ausgabe \n&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qFor>
+		</for>
+	</children>
+</root>
