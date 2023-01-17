@@ -20,10 +20,10 @@ public class Tannenbaum {
             System.out.print("\n");
             progress++;
         }
-        int trunkWeight = width / 10 >= 1 ? width / 10 : 1;
+        int trunkWidth = width / 10 >= 1 ? width / 10 : 1;
         for (int j=0; j < trunkHeight; j++) {
             for (int j1=0; j1 < width; j1++) {
-                if (width / 2 - trunkWeight < j1 && width / 2 + trunkWeight > j1  ) {
+                if (width / 2 - trunkWidth < j1 && width / 2 + trunkWidth > j1  ) {
                     System.out.print('+');
                 } else {
                     System.out.print('.');
